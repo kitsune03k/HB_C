@@ -1,20 +1,31 @@
 #include <stdio.h>
+//static 쓰지말고!
 
-int printodd(int x)
+void printodd(int *ptr)
 {
+	int i;
+	for( i = 0 ; i <= 9 ; i++ )
+	{
+		if(*(ptr+i)%2==0)
+			printf("%d ", *(ptr+i));
+	}
+
 }
 
-int printeven(int y)
+void printeven(int *ptr)
 {
+	int i;
+	for( i = 0 ; i <= 9 ; i++ )
+	{
+		if(*(ptr+i)%2==1)
+			printf("%d ", *(ptr+i));	
+	}
 }
-
 
 int main(void)
 {
-	static int arr[10];
-	static int odd[10];
-	static int even[10];
-
+	int arr[10];
+	
 	int i;
 	
 	printf("총 10개의 숫자 입력\n");
@@ -22,14 +33,11 @@ int main(void)
 	{
 		printf("%d번째 입력 : ", i+1);
 		scanf("%d", &arr[i]);
-		if(arr[i]%2=0)
-			odd[i] = arr[i];
-		else
-			even[i] = arr[i];
 	}
 	
 	printf("홀수 출력: ");
-	printodd;
+	printodd(arr);
 	printf("짝수 출력: ");
-	printeven;
+	printeven(arr);
+	printf("\n");
 }
