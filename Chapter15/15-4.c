@@ -19,5 +19,5 @@ int main(void)
 		}
 	}
 	printf("%s는 회문입니다\n", str);
-	return 0;
+
 }
