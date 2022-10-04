@@ -7,7 +7,7 @@ int main(void)
 	// () 사용 안함
 	printf("%d \n\n", arr[1][0][1]		); // 6
 	
-	printf("%d ", arr[1][0][1]			);
+	printf("%d ", arr[1][0][1]		);
 	// [][][]
 	printf("%d ", (*(arr+1))[0][1]		);
 	// ()[][]
@@ -16,7 +16,7 @@ int main(void)
 	printf("%d \n", *(*(*(arr+1)+0)+1)	);
 	// ()()()
 	
-	printf("%d ", arr[1][0][1]			);
+	printf("%d ", arr[1][0][1]		);
 	// [][][]
 	printf("%d ", *(arr[1][0]+1)		);
 	// [][]()
