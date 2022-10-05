@@ -20,7 +20,7 @@ int SRP(int x, int y, int z)
 		}
 	};
 	
-	return casearr[x][y][z];
+	return casearr[x-1][y-1][z-1];
 }
 
 int main(void)
@@ -39,7 +39,7 @@ int main(void)
 		arr[i++] = tmp;
 	}
 	
-	int result = SRP(arr[0]-1, arr[1]-1, arr[2]-1);
+	int result = SRP(arr[0], arr[1], arr[2]);
 	
 	switch(result){
 		case 1: // 3가지
