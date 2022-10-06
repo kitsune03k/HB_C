@@ -21,14 +21,12 @@ int main(void)
 		if(Hcount%2!=0){ // 가로이동이 홀수번째=우향일때 +1
 			for(i=0; i<limit; i++){
 				*(ptr+i) = value++;
-				printf("%d ", value-1);
 			}
 			ptr = ptr+limit-1+num; // 한칸 아래 포인터 전달
 		}
 		else{ // 가로이동이 짝수번째=좌향일때 -1
 			for(i=0; i<limit; i++){
 				*(ptr-i) = value++;
-				printf("%d ", value-1);
 			}
 			ptr = ptr-limit+1-num; // 한칸 위 포인터 전달
 		}
@@ -39,20 +37,17 @@ int main(void)
 		if(Vcount%2!=0){ // 세로이동이 홀수번째=하향일떄 +num
 			for(i=0; i<limit; i++){
 				*(ptr+(i*num)) = value++;
-				printf("%d ", value-1);				
 			}
 			ptr = ptr+num*(limit-1)-1; // 한칸 왼쪽 포인터 전달
 		}
 		else{ // 세로이동이 짝수번째=상향일때 -num
 			for(i=0; i<limit; i++){
 				*(ptr-(i*num)) = value++;
-				printf("%d ", value-1);
 			}
 			ptr = ptr-num*(limit-1)+1; // 한칸 오른쪽 포인터 전달
 		}
 		Vcount++;
 	}
-	printf("\n");
 	
 	for(int i=0; i<num; i++){
 		for(int j=0; j<num; j++){
