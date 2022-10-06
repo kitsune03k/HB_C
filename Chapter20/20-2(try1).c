@@ -8,7 +8,6 @@ int main(void)
 	scanf("%d", &num);
 	
 	int arr[num][num];
-	
 	int	*ptr = &arr[0][0];
 	
 	int limit = num;
