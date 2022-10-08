@@ -23,7 +23,7 @@ int main(void)
 		}
 	}
 	
-	printf("cpu : %d%d%d\n", cpu[0], cpu[1], cpu[2]);
+	printf("cpu : %d%d%d\n", cpu[0], cpu[1], cpu[2]); // 실제 작동시 주석처리
 	
 	printf("Start Game!\n\n");
 	int try = 0;
@@ -40,7 +40,7 @@ int main(void)
 			uservalid(user);
 		}
 		
-		printf("user : %d%d%d\n", user[0], user[1], user[2]);
+		printf("user : %d%d%d\n", user[0], user[1], user[2]); // 실제 작동시 주석처리
 
 		for(int i=0; i<3; i++){
 			for(int j=0; j<3; j++){
