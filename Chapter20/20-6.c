@@ -59,5 +59,5 @@ int main(void)
 			break;
 		}
 	
-	printf("%d번만에 승리!\nGame Over!", try);
+	printf("%d번만에 승리!\nGame Over!\n", try);
 }
