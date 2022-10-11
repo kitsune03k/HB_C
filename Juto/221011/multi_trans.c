@@ -31,14 +31,6 @@ void multi_trans(int a[][5], int b[][5])
 
 int main(void)
 {
-	int c[5][5];
-	
-	for(int i=0; i<5; i++){
-		for(int j=0; j<5; j++){
-			for(int k=0; ; k++)
-			c[i][j] = (k%10)+1;	
-		}
-	}
 	int a[5][5]={
 		{1,2,3,4,5},
 		{6,7,8,9,1},
