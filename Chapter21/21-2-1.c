@@ -6,7 +6,7 @@ int main(void)
 	char str[101];
 	
 	printf("100글자 이하의 숫자가 섞인 글을 입력하세요\n");
-	fgets(str, sizeof(str), stdin);
+	fgets(str, sizeof(str), stdin); // str[100]은 \0(null)
 
 	int endpoint = strlen(str)-1;
 	str[endpoint] = 0; // 마지막 \n(ascii 10) => null(ascii 0)
