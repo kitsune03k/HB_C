@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-void clearinputbuffer(void)
-{
-	while(getchar()!='\n'){};
-}
-
 int main(void)
 {
 	char str1[20];
