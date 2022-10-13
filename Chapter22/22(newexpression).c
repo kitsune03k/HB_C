@@ -43,7 +43,7 @@ int main(void)
 	따라서 포인터 선언시에 18-1-1.c와 비슷한 방식으로 포인터 선언해줘야함
 	*/
 	
-	printf("----종업원 등록----\n");
+	printf("----종업원 등록----\n\n");
 	for(i=0; i<3; i++){
 		printf("%d번째 사람의 이름을 입력하세요\n", i+1);
 		fgets((*ptrman+i)->name, sizeof((*ptrman+i)->name)/sizeof(char), stdin);
