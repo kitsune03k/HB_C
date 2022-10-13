@@ -44,7 +44,7 @@ int main(void)
 	int input;
 	
 	while(1){
-		input = getchar(); // crlf 무시 안됨;;
+		input = getchar(); // \n 무시 안됨;;
 		
 		if(abccheck(input) == 1){
 			break;
