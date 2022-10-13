@@ -39,6 +39,7 @@ int main(void)
 	man[0].rrn		man[1].rrn		man[2].rrn
 	man[0].pay		man[1].pay		man[2].pay
 	
+	열 먼저 접근, 그다음 행(맴버) 접근
 	따라서 포인터 선언시에 18-1-1.c와 비슷한 방식으로 포인터 선언해줘야함
 	*/
 	
