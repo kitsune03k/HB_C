@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-struct employee
+typedef struct // employee 생략 가능
 {
 	char name[20];
 	char rrn[20];
 	int pay;
-};
+} EMPLOYEE; // 구조체의 이름은 따로 안짓겠는데, 이렇게 구성된 구조체를 EMPLOYEE라고 하자~
 
-void trim(struct employee* p_man)
+void trim(EMPLOYEE* p_man)
 {
 	for(int i=0; i<3; i++){
 		for(int j=0; j<20; j++){
@@ -26,10 +26,10 @@ void clearinputbuffer(void)
 
 int main(void)
 {
-	struct employee man[3];
+	EMPLOYEE man[3];
 	int i;
 	
-	struct employee (*ptrman)[3] = &man; 
+	EMPLOYEE (*ptrman)[3] = &man; 
 	/*
 	man은 2차원 배열(비슷한 무언가)
 	
