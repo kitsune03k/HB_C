@@ -12,12 +12,17 @@ typedef struct
 	Point NE;
 } Rectangle;
 
-int area(Rectangle Rec)
+void showarea(Rectangle Rec)
 {
-	int calc = (Rec.NE.xpos-Rec.SW.xpos)*(Rec.NE.ypos-Rec.SW.ypos);
-	return calc;
+	printf("직사각형의 넓이는 %d\n",(Rec.NE.xpos-Rec.SW.xpos)*(Rec.NE.ypos-Rec.SW.ypos));
 }
 
+void showpoint(Rectangle Rec)
+{
+	printf("NW: (%d, %d), NE: (%d, %d)\nSW: (%d, %d), SE:(%d, %d)\n",
+		  Rec.SW.xpos, Rec.NE.ypos, Rec.NE.xpos, Rec.NE.ypos,
+		  Rec.SW.xpos, Rec.SW.ypos, Rec.NE.xpos, Rec.SW.ypos);
+}
 
 int main(void)
 {
@@ -25,8 +30,6 @@ int main(void)
 		{0,0}, 
 		{100,100}
 	};
-	
-	int result = area(Rec1);
-	
-	printf("Rec1의 넓이는 %d\n", result);
+	showarea(Rec1);
+	showpoint(Rec1);
 }
