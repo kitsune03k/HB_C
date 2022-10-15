@@ -19,7 +19,7 @@ void function2(STR (*p_arr)[3]) // decay 되지않은 포인터
 {
 	printf("size of function2 p_arr : %ld\n", sizeof(*p_arr));
 	for(int i=0; i<3; i++){
-		(*p_arr+i)->x++;
+		(*(p_arr)+i)->x++; // int 크기만큼 점프
 		(*p_arr)[i].y++; // arr[i]
 		// 이걸 어떻게 *(arr+i)로 바꾸지??
 	}
