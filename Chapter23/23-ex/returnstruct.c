@@ -18,11 +18,6 @@ void trim(EMPLOYEE* p_man)
 	}
 }
 
-void clearinputbuffer(void)
-{
-	while(getchar()!='\n'){};
-}
-
 EMPLOYEE GetEmployeeInfo(int i)
 {
 	EMPLOYEE tmp;
@@ -45,7 +40,7 @@ int main(void)
 	man[0].name		man[1].name		man[2].name
 	man[0].rrn		man[1].rrn		man[2].rrn
 	
-	열 먼저 접근후 맴버 접근, 맴버간 순서는 ㄴ작성순서순
+	열 먼저 접근후 맴버 접근, 맴버간 순서는 작성순서순
 	*/
 	
 	printf("----종업원 등록----\n\n");

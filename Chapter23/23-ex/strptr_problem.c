@@ -8,6 +8,7 @@ typedef struct // employee 생략 가능
 
 void trim(EMPLOYEE (*p_man)[3])
 {
+	printf("size of p_man : %ld\n", sizeof(*p_man)); // decay되지 않은것 확인!
 	for(int i=0; i<3; i++){
 		for(int j=0; j<20; j++){ // name, rrn은 지정된 포인터 없기에 *(arr+i) 불가능
 			if((*p_man+i)->name[j] == 10)
@@ -46,8 +47,7 @@ int main(void)
 	man[0].name		man[1].name		man[2].name
 	man[0].rrn		man[1].rrn		man[2].rrn
 	
-	열 먼저 접근, 그다음 행(맴버) 접근, 맴버간 순서는 작성순서순
-	따라서 포인터 선언시에 18-1-1.c와 비슷한 방식으로 포인터 선언해줘야함
+	열 먼저 접근후 맴버 접근, 맴버간 순서는 작성순서순
 	*/
 	
 	printf("----종업원 등록----\n\n");
@@ -56,16 +56,11 @@ int main(void)
 	}
 	
 	trim(&man);
-	/*
-	(man)과 (&man)은 다름. 전자는 decay되서 컴파일러 경고 발생
-	Decay 된 포인터는 [][]로만 접근 가능
-	Decay 되지않은 포인터는 [][], (arr+i) 전부 접근 가능
-	*/
 	
-	EMPLOYEE *ptrman = &man; 
+	EMPLOYEE (*ptrman)[3] = &man; 
 	
 	for(i=0; i<3; i++){
-		printf("%15s | %15s\n", *(*ptrman+i)->name, *(*ptrman+i)->rrn);
+		printf("%15s | %15s\n", (*ptrman+i)->name, (*ptrman+i)->rrn);
 	}
 	
 }
