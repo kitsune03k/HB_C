@@ -59,8 +59,8 @@ int main(void)
 	trim(&man);
 	/*
 	(man)과 (&man)은 다름. 전자는 decay되서 컴파일러 경고 발생
-	Decay 된 포인터는 [][]로 접근 가능
-	Decay 되지않은 포인터는 (arr+i)로 접근
+	Decay 된 포인터는 [][]로만 접근 가능
+	Decay 되지않은 포인터는 [][], (arr+i) 전부 접근 가능
 	*/
 	
 	for(i=0; i<3; i++){
