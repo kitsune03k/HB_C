@@ -9,7 +9,7 @@ typedef struct // employee 생략 가능
 void trim(EMPLOYEE (*p_man)[3])
 {
 	for(int i=0; i<3; i++){
-		for(int j=0; j<20; j++){ // name, rrn에 지정된 포인터 없기에 *(arr+i) 불가능
+		for(int j=0; j<20; j++){ // name, rrn은 지정된 포인터 없기에 *(arr+i) 불가능
 			if((*p_man+i)->name[j] == 10)
 				(*p_man+i)->name[j] = 0;
 			if((*p_man+i)->rrn[j] == 10)
@@ -38,12 +38,11 @@ int main(void)
 	EMPLOYEE man[3];
 	int i;
 	
-	EMPLOYEE (*ptrman)[3] = &man; 
 	/*
-	man은 2차원 배열(비슷한 무언가)
+	man은 1차원 구조체 배열!!!!!!!!!!!!!!!!
 	
 	man[0]			man[1]			man[2]
-	------------	------------	------------
+	안에
 	man[0].name		man[1].name		man[2].name
 	man[0].rrn		man[1].rrn		man[2].rrn
 	
@@ -63,8 +62,10 @@ int main(void)
 	Decay 되지않은 포인터는 [][], (arr+i) 전부 접근 가능
 	*/
 	
+	EMPLOYEE *ptrman = &man; 
+	
 	for(i=0; i<3; i++){
-		printf("%15s | %15s\n", (*ptrman+i)->name, (*ptrman+i)->rrn);
+		printf("%15s | %15s\n", *(*ptrman+i)->name, *(*ptrman+i)->rrn);
 	}
 	
 }
