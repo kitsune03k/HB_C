@@ -15,7 +15,7 @@ int main(void)
 				
 		printf("i=%d, 정수 입력", i);
 		scanf("%d", &numbers[i]);
-		if(numbers[i] == -1)
+		if(numbers[i] == -1) // tmpnum 만들어서 처리는 좋지않다, 배열내에서 처리할것
 			break;
 		i++;
 	}
