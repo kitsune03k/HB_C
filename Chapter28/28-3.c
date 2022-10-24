@@ -36,7 +36,7 @@ int main(void)
 	complnum addresult = compladd(numarr[0], numarr[1]);
 	complnum mulresult = complmul(numarr[0], numarr[1]);
 	
-	printf("합의결과: 실수: %f, 허수 %f\n", addresult.real, addresult.imagin);
-	printf("곱의결과: 실수: %f, 허수 %f\n", mulresult.real, mulresult.imagin);
+	printf("합의결과: 실수부 %f, 허수부 %f\n", addresult.real, addresult.imagin);
+	printf("곱의결과: 실수부 %f, 허수부 %f\n", mulresult.real, mulresult.imagin);
 
 }
