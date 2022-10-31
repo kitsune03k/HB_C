@@ -2,9 +2,9 @@
 
 int main(void)
 {
-	FILE* fp1 = fopen("mystory.txt", "wt");
-	FILE* fp2 = fopen("mystory.txt", "at");
-	FILE* fp3 = fopen("mystory.txt", "rt"); 
+	FILE* fp1 = fopen("24-1mystory.txt", "wt");
+	FILE* fp2 = fopen("24-1mystory.txt", "at");
+	FILE* fp3 = fopen("24-1mystory.txt", "rt"); 
 
 	if( fp1 == NULL || fp2 == NULL ){
 		printf("파일오픈 실패!");
